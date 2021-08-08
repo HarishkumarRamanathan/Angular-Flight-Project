@@ -1,0 +1,24 @@
+<p>manage-airlines works!</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label>FlightNumber: </label><input formControlName="flightNumber" type="text" />
+    <label>AirlineName: </label><input formControlName="airlinesName" type="text" />
+    <label>price: </label><input formControlName="price" type="number" />
+    <label>From: </label>
+    <select id="fromLocation" name="fromLocation">
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Hydrebad">Hydrebad</option>
+        <option value="Delhi">Delhi</option>
+    </select>
+    <label>To: </label>
+    <select id="fromLocation" name="fromLocation">
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Hydrebad">Hydrebad</option>
+        <option value="Delhi">Delhi</option>
+    </select>
+    <button type="submit">Save</button>
+</form>
+<div>
+    
+</div>

@@ -1,0 +1,20 @@
+<h3>Login Page</h3>
+
+<div>
+    <form [formGroup]="myForm" (ngSubmit)="getLogin()">
+        <div>
+            <label for="">Username: </label>
+            <input formControlName="email" type="text" />
+            <p class="error" *ngIf="myForm.controls.email.dirty && !!myForm.controls.email.errors">
+                <span *ngIf="!!myForm.controls.email.errors.required">Email id can not be empty</span>
+                <span *ngIf="!!myForm.controls.email.errors.pattern">Email id is not valid</span>
+            </p>
+        </div>
+        <div>
+            <label for="">Password: </label>
+            <input formControlName="password" type="text" />
+        </div>
+
+        <button [disabled]="myForm.invalid" type="submit">Login</button>
+    </form>
+</div>
